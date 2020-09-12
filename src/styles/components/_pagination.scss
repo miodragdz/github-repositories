@@ -1,0 +1,77 @@
+@mixin breakpoint ($value) {
+  @if $value == 'phone' {
+    @media only screen and (min-width: 120px) and (max-width: 767px) { @content; }
+  } @else if $value == 'tablet' {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+  } @else if $value == 'touch' {
+    @media only screen and (min-width: 120px) and (max-width: 1024px) { @content; }
+  } @else if $value == 'desktop' {
+    @media only screen and (min-width: 1025px) { @content; }
+  } @else {
+    @media only screen and (max-width: $value) { @content; }
+  }
+}
+
+.pagination {
+	display: inline-block;
+	height: 70px;
+	margin-top: 50px;
+	padding: 0 25px;
+
+	@include breakpoint(1199px) {
+		height: 50px;
+		margin-top: 50px;
+		padding: 0 10px;
+	}
+}
+
+.page-numbers {
+	display: block;
+	padding: 0 25px;
+	float: left;
+	color: $gray;
+	font-size: 20px;
+	letter-spacing: 0.1em;
+  line-height: 70px;
+  border: none;
+  min-width: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: sans-serif;
+
+	&:hover {
+    border: none;
+		background-color: $gray-gray;
+		color: $white;
+  }
+  
+	&.current {
+    border: none;
+		background-color: $green;
+		color: $white;
+	}
+
+	&.prev:hover,
+	&.next:hover {
+    border: none;
+		background-color: transparent;
+    color: $green;
+  }
+  
+  &:focus { 
+    outline: none; 
+  }
+
+	@include breakpoint(1199px) {
+		padding: 0 15px;
+		font-size: 16px;
+		line-height: 50px;
+  }
+  
+  @include breakpoint(670px) {
+		padding: 0 10px;
+		font-size: 12px;
+		line-height: 50px;
+	}
+
+}
