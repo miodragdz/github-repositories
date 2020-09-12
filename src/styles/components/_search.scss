@@ -1,0 +1,32 @@
+.search {
+	margin: 0 auto;
+}
+
+.form__button {
+	background-color: $gray-dark;
+	color: $white;
+	padding: 5px 20px;
+	margin-left: 20px;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	font-family: inherit;
+
+	&:disabled {
+		background-color: $gray-gray;
+		color: $gray;
+		padding: 5px 20px;
+		cursor: default;
+		border: none;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: inherit;
+  }
+}
+
+.form__input {
+	height: 1.8rem;
+	width: 250px;
+	font-family: inherit;
+}
+

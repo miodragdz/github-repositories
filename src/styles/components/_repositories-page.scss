@@ -9,3 +9,19 @@
   font-size: calc(8px + 2vmin);
   color: $white;
 }
+
+.search__wrapper {
+  margin: 2rem 0 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
