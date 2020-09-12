@@ -1,14 +1,21 @@
-import axios from 'axios';
-import { apiRepositories } from '../utils/apiRoutes';
+import axios from "axios";
+import { apiRepositories } from "../utils/apiRoutes";
 
-export const setRepositories = (repositories) => ({
-  type: 'SET_REPOSITORIES',
+const setRepositories = (repositories) => ({
+  type: "SET_REPOSITORIES",
   payload: repositories,
 });
 
-export const getRepositories = (dispatch, searchTerm, pageNumber) => {
+const getRepositories = (dispatch, searchTerm, pageNumber) => {
   return axios.get(apiRepositories(searchTerm, pageNumber)).then(({ data }) => {
     dispatch(setRepositories(data));
-    return data
+    return data;
   });
 };
+
+const actionFunctions = {
+  setRepositories,
+  getRepositories,
+};
+
+export default actionFunctions;

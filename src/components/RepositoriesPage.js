@@ -4,7 +4,7 @@ import Search from "./Search";
 import RepositoryCard from "./RepositoryCard";
 import Loader from "./Loader";
 import Pagination from "./Pagination";
-import { getRepositories } from "../actions/repositoriesAction";
+import actionFunctions from "../actions/repositoriesAction";
 import { isArrayEmpty } from "../utils/helpers";
 
 export class RepositoriesPage extends Component {
@@ -96,7 +96,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   getRepositories: (searchTerm, pageNumber) =>
-    getRepositories(dispatch, searchTerm, pageNumber),
+    actionFunctions.getRepositories(dispatch, searchTerm, pageNumber),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RepositoriesPage);

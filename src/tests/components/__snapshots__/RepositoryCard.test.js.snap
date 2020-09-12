@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render RepositoryCard with language info 1`] = `ShallowWrapper {}`;
+
+exports[`should correctly render RepositoryCard without language info 1`] = `ShallowWrapper {}`;

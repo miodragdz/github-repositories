@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RepositoriesPage with message 1`] = `ShallowWrapper {}`;
+
+exports[`should render RepositoriesPage with repositories 1`] = `ShallowWrapper {}`;
